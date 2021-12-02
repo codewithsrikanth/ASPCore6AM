@@ -1,0 +1,247 @@
+ASP.Net Core MVC: It is server side web technology, used to build web applications.
+
+Types of Applications: 
+	- Standalone Applications
+		- Single user applications.
+		- For every user,we should have seperate installation.
+		- Ex: Console Apps, Windows Apps and Mobile Apps etc.
+	- Distributed Applications
+		- Multi user applications
+		- Multiple users can communicate with the application at a time.	
+		- Example: Web Applications.
+
+How to build a web applications ?
+- A web application is a collection of web pages.
+- To build these kind of applications we use "Web Technology".
+- These are of two types
+	- Client(Browser) Side Technology 
+		- The technologies which are able to understand by the browser are called client side technologies.
+		- It wil understand only 3 those are like HTML, CSS and Javascript.
+	- Server Side Technology	
+		- A server is a web server, where we have install/host the application.
+		- To understand server we use Server Side Technologies.
+		- Examples: ASP.Net, ASP.Net MVC, ASP.Net Core,ASP.Net Core MVC, JSP, Struts MVC,Spring MVC, Php, 		Python, RubyOnRails etc.
+
+Duration: 40Days
+Timing: 6AM to 7AM as per IST
+----------------------------------------------------------------------------------------------------------
+Why Microsoft Introduced .Net Core/ASP.Net Core as we have ASP.Net/ASP.Net MVC?
+
+Platform:It is the combination of OS architecture and processor architecture.
+
+Platform Depdendent: If we develop an application by using one platform, and if it runs only on that platform is called platform dependent.
+	Windows OS  => Web Server(IIS)	=>	Application(ASP.Net/ASP.Net MVC)
+
+Platform Independent: If we develop an application by using one platform and it runs on any platform.
+		ASP.Net Core/MVC	=>	Web Server(IIS, Krestal,Apache, Tomact)  => Windows/Linux/Mac OS
+		
+ASP.Net Core/MVC: It is a web technology, which is completly open source,and cross platform server side technology used to build web applications.
+
+Fetures of Asp.Net Core/MVC:
+- Inbuilt Depdency Injuction : Which is used to make application as loosely coupled.
+- Cross Platform : Any OS can run.
+- Open source : Free and source code is in Github and open for code contributions.
+- Razor Engine: It is used to execute the View pages without dependeding on ASP.Net Core Engine.
+- Tag Helpers : Exactly similar HTML elements with C#.Net Logic.
+- JSON Files for configurations.
+- .Net Core CLI support.
+- Unified framework for building web API's and MVC applications
+- Every package we will get it from Nuget Package Manager etc.
+
+Note: .Net Core 5.0 => VS 2019 16+v / VS 2022 community
+----------------------------------------------------------------------------------------------------------
+Empty Application Folder Structure:
+- Depdendencies : It is mainly used to install the packages(Server Packages - *.dll)
+- launchSettings.json : It's all about hosting configurations based on environment.
+- wwwroot : Contains all the static files(Client Side Files - HTML, CSS, JS, BS, JQeury etc.).
+- appsettings.json : It is exactly similar to web.config file, used to define global application configurations like defining connection strings, session, api urls, global variables etc.
+Note: Generally appSettings.json, is getting information based on Environment that we are working.
+- libman.json: Used to track client side library information.
+- Program.cs: Will be used to define host information.
+- Startup.cs : This class file is used to inject the depedncy that are needed to run the application.
+
+
+Services:
+- app.UseStaticFiles() : It is used to allow the files to be accessed which are there in wwwroot folder.
+- app.UseDefaultFiles(): Used to execute the default.html file from wwwroot folder.
+- app.useFileServer() : It is the combination of both above services, if we use it we no need call remaing for static files.
+- Every service in Startup.cs file is a "MiddleWare".
+- It is nothing but a functionality, which will get executed when we run the application.
+- We have few in built middle ware is avaible along with that based on the requirement we will create our own is called "CustomMiddleware".
+	
+	app.Use();		-	Once if the middleware execution is done,if we want to proceed with next middleware, then we create with app.Use().	
+	app.Run();		-	Once we have this it won't execute next middlewares.
+----------------------------------------------------------------------------------------------------------
+What is MVC?
+- It stands for Models,Views and Controllers.
+- MVC is a design pattern,a design pattern is nothing but solution for commonly addressing problems.
+- In MVC
+	- Models	-	These are used to communicate with datasource and write the businuss logic(EF Core).
+	- Controllers - Request handling logic, and used to process the request by communicating with Views and Model.
+	- Views		-	These are used to disply purpose means presentations (*.cshtml)
+
+
+	http:localhost:2345/default.html
+	http:localhost:2345/default.aspx
+	
+	htpp:localhost:2345/Home/Index		-	Home(Controller) and Index(ActionMethod)
+
+Rules for Controller:
+1. Every controller name must be suffixed with "Controller"
+2. It must be public
+3. It must be inherited from "Controller" class.
+- Controllers are having methods and we call them as "Action Methods".
+- Every action method,is having a return type as a result class and we have like
+	- JSONResult
+	- FileResult
+	- ViewResult
+	- ContentResult
+	- RedirectToAction
+	- JavsscriptResult etc.
+- But all the result classes are deriving from ActionResult/IActionResult, sowe can directly use.
+
+Action Methods:
+- In controller we have different methods and all the methods we call it as "ActionMethods".
+- We have 3 types of action methods
+	- Action ethod with view as return type
+		- These methods are having return as ViewResult/ActionResult/IActionResult.
+		- For these methods it is mandatory to create view page.
+		- These methods are browsable.
+		
+	- Action method with non-view as return type
+		- These methods are having return types as anything apart from ViewResult.
+		- Mainly these methods are used to share data, and data can be string, json, file etc.
+		- For these action methods creating a view page is optional.
+		- But we are able to execute from browser.
+		
+	- NonAction methods
+		- These methods are the local methods to controller.
+		- If we want execute a common logic, and which is required for controller action methods, then we use it.
+		- To create this we use an attribute class [NonAction].
+		- These are non-browsable.
+		
+Razor Programming: 
+- It is nothign but writing C#.Net in HTML is called Razor Program.
+- Bcoz, in HTML everything will be considered as content,so it won't understand C#.Net logic, to make it understand we use Razor syntax by using "@"
+- We have 3 options to write razor programming like
+	- Inline Statements		:	With in HTML tag, if we want to include C#.
+		Example: <h1>Welcome @username</h1>
+	- Mulitline statements	:	Used to write multiple lines of C#.Net statements. 
+		Example: @{
+			//C# statements.
+		}
+	- Singleline statements	:	Used to write single line C#.Net Statement.	
+		Example: @{Employee Obj = new Employee();}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
