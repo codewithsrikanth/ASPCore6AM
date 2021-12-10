@@ -133,6 +133,108 @@ Razor Programming:
 	- Singleline statements	:	Used to write single line C#.Net Statement.	
 		Example: @{Employee Obj = new Employee();}
 		
+HTML Helpers:
+- In ASP.Net MVC/ASP.Net MVC core, to generate the HTML based inputs we use HTML Helpers.
+- These are nothing but methods, which will automatically generates HTML based content.
+- All these methods are available in HTMLHepler calss, and we have a pre-defined object i.e. "Html".
+- We have methods like
+	- Html.TextBox()
+	- Html.Password()
+	- @Html.Radio()
+	- Html.CheckBox()
+	- Html.DropDownList() etc.
+----------------------------------------------------------------------------------------------------------
+Data Sharing Techniquies:
+- These are used to share the data from Controller to View and Viceversa.
+	- View to Controller
+		- Get Action
+			- When the application executes first request.
+			- When the user click on Hyperlink.
+			- When user enter some url from browser.
+			- From the Get action to share the data we have two approches
+				- Query String
+				- Route URL Parameter (Default)
+		- Post Action
+			- Only when user click on "Submit".
+			- From the Post action to share the data we have three approches	
+				- FormCollection
+				- Formal Parameters
+				- Model Class Object (Default)
+	- Controller to View (Statemanagement Techniquie)
+		- ViewData
+		- ViewBag
+		- TempData
+		- Session
+		- Application
+		- Model Class Objects
+- ViewData and ViewBag both are used for same purpose.
+- Both are having the data in key and value pair combination.
+- ViewData will store in "object" type, but ViewBag wil store of type "dynemic".
+- Both are belongs to "ViewDataDictionary".
+- Both are used to maintain the data for current request only.
+- TempData is exactly similar to ViewData, but it maintain the data for current request and also subsequent request.
+- When the object of TempData Dictionary is read,then it will be marked as deletion so it won't maintain the information
+
+Scaffolding Feature:
+- It is nothing but automatic code generation for Views and also controllers.
+- These are bind with the Model class and used for CRUD Operations.
+- To work with this Visual Studio provides different templates like
+	Display All Records		-	List
+	Single Records			-	Details
+	Update					-	Edit
+	Remove a record			-	Delete
+	Insert a record			-	Create
+	
+_ViewImports: It is used to Add the import/using statements, that will be used across the view pages.
+- So that if any changes are happen in the import statements we don't have dependency in views.
+
+Partial View: 
+- It is a portion of View page, which is used for resuability.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
