@@ -190,6 +190,132 @@ _ViewImports: It is used to Add the import/using statements, that will be used a
 
 Partial View: 
 - It is a portion of View page, which is used for resuability.
+- Once it is created we can integrate with any of the View page like
+	<partial name="name of the view" model="data"/>
+
+Layout View:
+- It is used to maintain consistant look for the entire application.
+- In Layout to render the view page we use "@RenderBody()"
+
+Note: All these should be created in Shared folder under the view folder.
+
+Tag Helpers:
+- These are the HTML tags only, which will be having some data integrated with "asp-" attributes.
+- It is similar to  HTML Helper which will render HTML code automatically when the view is rendered on browser.
+----------------------------------------------------------------------------------------------------------
+
+
+Validations/Data Annotations: 
+- It is nothing but verify the user's input.
+- We can validate from client side itslef by using JS and libraries, but we have a limitation that user can disable it from browser.
+- To adress these issues we use server side validation too.
+- In Here we have DataAnnotations, these are  the attribute classes,we can apply these classes at model level.
+- Example: [Required],[RegularExpression],[Compare] etc.
+- If all the validations are not meet our requirements, then we will create custom validations.
+- Custom validations is also an attribute class, whcih is suffixed with Attribute and inherited from "ValidationAttribute" class.
+- ValidationAttribute class is having "IsValid()", which is virtual, we can override and write our logic.
+---------------------------------------------------------------------------------------------------------
+Dependency Injection:
+- It is mainly for loosly couple modules
+- Supports logical abstractions of component.
+- Object dispose is also taken care by depdendecy injection.
+- .Net Core applications by defualt comes with in built depedency injuction.
+- To create a object for the component we have 3 scopes
+	- AddSingleton(): It will create a single instance among all the components of the service.
+	- AddScoped(): Instance per request, for a single HTTP request,it wil create an object.
+	- AddTransient(): Every time it will cretae a new instance.
+- We will inject service at 3 levels
+	- Constructor
+	- Action Method level
+	- View Level
+	
+Filters:
+- These are nothing but attribute classes, we can apply for action methods.
+- Filters are used to apply the pre and post action behaviour.
+- We have two types
+	- In built
+		- [Authorize]
+		- [OutputCache]
+		- [AntiForgeryToken] 	
+		- [ValidateInput] etc.		
+	- Custom : All the filters are not meet our requirement will use CustomFilters.
+
+We have 4 categories of fileters
+	- ActionFilters				-	IActionFilter
+	- Authorization Filters		-	IAuthorizationFilter
+	- Result Filters			-	IResultFilters
+	- Execption Filters			-	IExecptionFilter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
