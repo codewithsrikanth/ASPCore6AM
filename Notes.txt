@@ -246,6 +246,79 @@ We have 4 categories of fileters
 	- Result Filters			-	IResultFilters
 	- Execption Filters			-	IExecptionFilter
 
+----------------------------------------------------------------------------------------------------------
+Entity Framework Core:
+- It is an ORM(Object Relational Mapping) tool, used to perform CRUD Operations with DB.
+- It is used to Map relational object with real world programming objects.
+	Tables					=>		Classes
+	Columns					=>		Auto Implemented Properties
+	Rows					=>		Objects/Instance
+	Stored Procedure		=>		Functions
+- We have different ORM tools like Entity Framework, Entity framework Core, Hibernite, N-Hibernite, Dapper etc.
+- It supports two options for us like
+	- EF Code First Approch: From the code we will create DB and Tables
+	- EF Core DB First Approch: Will Create DB First and based on the table will Generate Models.
+
+Steps to work with EF Core DB First:
+- Create Model Classes.
+- Add the depedent Paackages
+	- Entity Framework Core Design
+	- Entity Framework Core Sql Server
+- Define the Connections appsettings.json
+- Create Context Class by inheriting from "DbContext" class
+- Configure Services
+
+	Insert		->		Add()
+	Update		->		Update()
+	Delete		->		Remove()
+	GetAll		->		List()
+	GetSingle	->		Find()
+- Create a controller
+- Create the View Page
+
+Steps to Work with EF Core Code First Approch:
+- Create Model Classes
+-Add Dependency
+	- Microsoft EF Core Tools
+- Run the commands for Migration
+	> Add-Migration -Name <NameOfMigration>
+	> Update-Database
+
+
+
+
+
+
+
+
+
+Registration
+	- Username
+	- Password
+	- Email
+	- DOB etc.
+	
+
+	
+	
+	Login View
+		EnterUsername: []
+		Enter Password: []
+	Forget Password View 
+		Enter Email: []
+		Enter Password: []
+		Confirm Password: []
+	Registration View 
+		Enter Username:[]
+		Enter Password:[]
+		Enter Email:[]
+		Enter DOB:[]
+
+
+
+
+
+
 
 
 
